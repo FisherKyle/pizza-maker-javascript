@@ -1,10 +1,10 @@
 // Backsies
 
-function Pizza(size, toppingOne, toppingTwo, toppingThree) {
+function Pizza(size, toppingOne, toppingTwo, delivery) {
   this.size = size;
   this.toppingOne = toppingOne;
   this.toppingTwo = toppingTwo;
-  this.toppingThree = toppingThree;
+  this.delivery = Delivery;
 }
 
 function Delivery(street, city, state) {
@@ -21,3 +21,5 @@ $(document).ready(function() {
 
   });
 });
+
+console.log('#pizzaInfo');
