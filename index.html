@@ -16,56 +16,79 @@
       <div class="row" id="selectBox">
         <h2>create your pizza:</h2>
         <!-- pizza selectors -->
-
         <form id="pizzaInput">
 
-        <div class="col-md-3">
-          <div class = "form-group">
-            <label for="size">select your<br> size:</label>
-              <select name="sizeSelect" type="submit" id="sizeInput">
-                <option value="small">small</option>
-                <option value="medium">medium</option>
-                <option value="large">large</option>
-              </select>
-              <span class='btn btn-primary' type="submit">ok</span>
-          </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div class="form-group">
-              <label for="toppingOne">select 1st topping:</label>
-                <select name="toppingOneSelect" type="submit" id="toppingInputOne">
-                  <option value="bacon">bacon</option>
-                  <option value="olives">olives</option>
-                  <option value="mushrooms">mushrooms</option>
-                  <option value="sausage">sausage</option>
-                  <option value="veggies">veggies</option>
-                  <option value="pepperoni">pepperoni</option>
-                 </select>
-              </div>
-              <span class='btn btn-primary' type="submit">ok</span>
-        </div>
-
-        <div class="col-sm-3">
-            <label for="toppingTwo">select 2nd topping:</label>
-            <div class = "form-group">
-              <select name="toppingTwoSelect" type="submit" id="toppingInputTwo">
-                <option value="bacon">bacon</option>
-                <option value="olives">olives</option>
-                <option value="mushrooms">mushrooms</option>
-                <option value="sausage">sausage</option>
-                <option value="veggies">veggies</option>
-                <option value="pepperoni">pepperoni</option>
-              </select>
+          <div class="col-md-3" id="sizeInput">
+            <div class="radio">
+              <label for="toppingOne"><span id="labelHead">select your size:</span><br><br>
+                <input type="radio" class="radOpt" name="selectSize" value="small">
+                small 10"
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selectSize" value="medium">
+                medium 14"
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selectSize" value="large">
+                large 18"
+              </label><br>
             </div>
-            <span class='btn btn-primary' type="submit">ok</span>
-        </div>
-        </form>
-        <div class="col-sm-9" id="orderPizza">
-          <p>___________________</p>
-        </div>
+          </div>
+
+          <div class="col-md-3" id="toppingInputOne">
+            <div class="radio">
+              <label for="toppingOne"><span id="labelHead">select first topping:</span><br><br>
+                <input type="radio" class="radOpt" name="selTopOne" value="pepperoni">
+                pepperoni
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopOne" value="sausage">
+                sausage
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopOne" value="mushroom">
+                mushroom
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopOne" value="olives">
+                olives
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopOne" value="veggies">
+                veggies
+              </label><br>
+            </div>
+          </div>
+
+          <div class="col-md-3" id="toppingInputTwo">
+            <div class="radio">
+              <label for="toppingTwo"><span id="labelHead">select next topping:</span><br><br>
+                <input type="radio" class="radOpt" name="selTopTwo" value="pepperoni">
+                pepperoni
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopTwo" value="sausage">
+                sausage
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopTwo" value="mushroom">
+                mushroom
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopTwo" value="olives">
+                olives
+              </label><br>
+              <label>
+                <input type="radio" class="radOpt" name="selTopTwo" value="veggies">
+                veggies
+              </label><br>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit" id="createPie">create!
+          </button>
+        <!-- end of pizza selectors -->
       </div>
-      <!-- end of pizza selectors -->
       <div class="col-sm-3" id="addressInput">
         <div id="deliveryInput">
           <h3>for delivery, enter your address:</h3>
@@ -74,30 +97,41 @@
               <div class="new-address primary-addresses">
                 <div class="form-group">
                   <label for="new-street">Street</label>
-                  <input type="text" class="form-control new-street"  placeholder="ex. 950 Ivy Drive">
+                  <input type="text" class="form-control new-street" id="userStreet" placeholder="example: 213 Meatball Way">
                 </div>
                 <div class="form-group">
                   <label for="new-city">City</label>
-                  <input type="text" class="form-control new-city" placeholder="ex. New York">
+                  <input type="text" class="form-control new-city" id="userCity" placeholder="example: Margaritaville">
                 </div>
                 <div class="form-group">
                   <label for="new-state">State</label>
-                  <input type="text" class="form-control new-state" placeholder="ex. NY">
+                  <input type="text" class="form-control new-state" id="userState" placeholder="example: NJ">
                 </div>
-                <span class="btn btn-primary" id="addDelivery">add</span>
-              </div>
-            </div>
-            <div class="container" id="orderBox">
-              <div class="row">
-                <div class="col-sm-3" id="orderAddress">
-                  <p>address</p>
-                  <ul id="output"></ul>
-                </div>
+                <span class="btn btn-primary" type="submit" id="addDelivery">save</span>
               </div>
             </div>
           </div>
-
+        </form>
         </div>
+      </div>
+    <div class="container" id="orderBox">
+      <div class="row">
+
+        <div class="col-sm-6" id="orderPizza">
+          <p>_________________________</p>
+        </div>
+
+        <div class="col-sm-3" id="orderAddress">
+          <h4>your pizza:</h4>
+          <h5>____________________________________<h5>
+          <ul id="outputPizza">
+          </ul>
+          <h4 id="addressSpace">your address:</h4>
+          <h5>____________________________________<h5>
+          <ul id="outputAddress">
+          </ul>
+        </div>
+
       </div>
     </div>
 

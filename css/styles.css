@@ -1,5 +1,5 @@
 body {
-  background-color:#4b0202;
+  background-color: #4b0202;
 }
 
 h1 {
@@ -24,6 +24,20 @@ h3 {
   margin-bottom: 8%;
 }
 
+h4 {
+  color: #4b0202;
+  font-family: "Arial Rounded MT Bold";
+  margin-top:9%;
+  margin-left:6%;
+  float:left;
+}
+
+h5 {
+  color: #4b0202;
+  font-style: oblique;
+  font-family: "Arial Rounded MT Bold";
+}
+
 label {
   color: #f4d9be;
   font-family: "Arial Rounded MT Bold";
@@ -31,11 +45,11 @@ label {
 }
 
 p {
-text-align: center;
-color: #f4d9be;
-font-size: 300%;
-font-family: "Arial Rounded MT Bold";
-margin-left: 23%;
+  text-align: center;
+  color: #f4d9be;
+  font-size: 300%;
+  font-family: "Arial Rounded MT Bold";
+  position: relative;
 }
 
 .btn {
@@ -43,10 +57,17 @@ margin-left: 23%;
   text-align: center;
 }
 
+#orderBox {
+  /*margin: 1%;*/
+}
+
 #orderAddress {
   background-color: #a50d0d;
   border-radius: 8px;
   float: left;
+  margin-left: 3%;
+  margin-top: 2%;
+  min-height: 300px;
 }
 
 #orderPizza {
@@ -58,30 +79,33 @@ margin-left: 23%;
 }
 
 #addressInput {
-margin-left: 4%;
+  margin-left: 4%;
 }
 
 #pizzaInput {
   margin: 5%;
   margin-bottom: 5%;
 }
+
 #toppingInputTwo {
   margin-top: 1%;
-  margin-left: 90%;
   margin-bottom: 8%;
+  float:left;
 }
+
 #toppingInputOne {
   margin-top: 1%;
-  margin-left: 48%;
   margin-bottom: 8%;
-
+  float:left;
 }
+
 #SizeInput {
   margin-top: 1%;
-  margin-left: 10%;
   margin-bottom: 8%;
+  float:left;
 
 }
+
 #selectBox {
   background-color: #a50d0d;
   float: left;
@@ -90,6 +114,22 @@ margin-left: 4%;
   margin-top: 5px;
 }
 
-select {
-  float: left;
+#labelHead {
+  color: #4b0202;
+}
+
+#createPie {
+  color: #4b0202;
+  background-color: #f4d9be;
+  float:right;
+  margin-top: 28%;
+}
+
+#addDelivery {
+  color: #4b0202;
+  background-color: #f4d9be;
+}
+
+#addressSpace {
+  margin-top: 20%;
 }
