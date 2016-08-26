@@ -16,114 +16,89 @@
       <div class="row" id="selectBox">
         <h2>create your pizza:</h2>
         <!-- pizza selectors -->
-        <form id="pizzaInfo">
+
+        <form id="pizzaInput">
 
         <div class="col-md-3">
-          <form id="pizzaSizeInput">
-            <label for="size">select your size:</label><br>
+          <div class = "form-group">
+            <label for="size">select your<br> size:</label>
+              <select name="sizeSelect" type="submit" id="sizeInput">
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+              </select>
+              <span class='btn btn-primary' type="submit">ok</span>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="form-group">
+              <label for="toppingOne">select 1st topping:</label>
+                <select name="toppingOneSelect" type="submit" id="toppingInputOne">
+                  <option value="bacon">bacon</option>
+                  <option value="olives">olives</option>
+                  <option value="mushrooms">mushrooms</option>
+                  <option value="sausage">sausage</option>
+                  <option value="veggies">veggies</option>
+                  <option value="pepperoni">pepperoni</option>
+                 </select>
+              </div>
+              <span class='btn btn-primary' type="submit">ok</span>
+        </div>
+
+        <div class="col-sm-3">
+            <label for="toppingTwo">select 2nd topping:</label>
             <div class = "form-group">
-              <select type="submit">
-                <option>10"</option>
-                <option>14"</option>
-                <option>18"</option>
+              <select name="toppingTwoSelect" type="submit" id="toppingInputTwo">
+                <option value="bacon">bacon</option>
+                <option value="olives">olives</option>
+                <option value="mushrooms">mushrooms</option>
+                <option value="sausage">sausage</option>
+                <option value="veggies">veggies</option>
+                <option value="pepperoni">pepperoni</option>
               </select>
             </div>
             <span class='btn btn-primary' type="submit">ok</span>
-          </form>
-        </div>
-
-        <div class="col-sm-3">
-          <form id="toppingInputOne">
-            <div class="form-group">
-              <label for="toppingOne">topping #1:</label><br>
-                <select type="submit">
-                  <option>Mushrooms</option>
-                  <option>Olives</option>
-                  <option>Bacon</option>
-                  <option>Sausage</option>
-                  <option>Veggies</option>
-                  <option>Pepperoni</option>
-                </select>
-              </div>
-              <span class='btn btn-primary' type="submit">ok</span>
-          </form>
-        </div>
-
-        <div class="col-sm-3">
-          <form id="toppingInputTwo">
-              <label for="toppingTwo">topping #2:</label><br>
-              <div class = "form-group">
-                <select type="submit">
-                  <option>Mushrooms</option>
-                  <option>Olives</option>
-                  <option>Bacon</option>
-                  <option>Sausage</option>
-                  <option>Veggies</option>
-                  <option>Pepperoni</option>
-                </select>
-              </div>
-              <span class='btn btn-primary' type="submit">ok</span>
-          </form>
         </div>
         </form>
+        <div class="col-sm-9" id="orderPizza">
+          <p>___________________</p>
+        </div>
       </div>
-    </div>
-<!-- end of pizza selectors -->
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>for delivery, click to add an address.</h2>
-    <span class="btn btn-primary" id="addDelivery">add</span>
-
-          <div id="deliveryInput">
-            <span class = "btn-primary" id="addTopping">
-            </div>
-          </div>
-
-          <!-- <div class="form-group">
+      <!-- end of pizza selectors -->
+      <div class="col-sm-3" id="addressInput">
+        <div id="deliveryInput">
+          <h3>for delivery, enter your address:</h3>
           <div class="new-address primary-addresses">
             <div class="form-group">
-              <label for="new-street">Street</label>
-              <input type="text" class="form-control new-street"  placeholder="ex. 950 Ivy Drive">
+              <div class="new-address primary-addresses">
+                <div class="form-group">
+                  <label for="new-street">Street</label>
+                  <input type="text" class="form-control new-street"  placeholder="ex. 950 Ivy Drive">
+                </div>
+                <div class="form-group">
+                  <label for="new-city">City</label>
+                  <input type="text" class="form-control new-city" placeholder="ex. New York">
+                </div>
+                <div class="form-group">
+                  <label for="new-state">State</label>
+                  <input type="text" class="form-control new-state" placeholder="ex. NY">
+                </div>
+                <span class="btn btn-primary" id="addDelivery">add</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="new-city">City</label>
-              <input type="text" class="form-control new-city" placeholder="ex. New York">
-            </div>
-            <div class="form-group">
-              <label for="new-state">State</label>
-              <input type="text" class="form-control new-state" placeholder="ex. NY">
+            <div class="container" id="orderBox">
+              <div class="row">
+                <div class="col-sm-3" id="orderAddress">
+                  <p>address</p>
+                  <ul id="output"></ul>
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
-
-            <span class="btn btn-primary" id="addTopping">Add another topping:</span>
-
-            <button type="submit" class="btn">Add</button>
-
-            <form>
-              <button type="submit" class="btn">Create pie!</button>
-            </form>
-          <h2>Contacts:</h2>
-          <ul id="deliveryOutput">
-
-          </ul>
-        </div>
-
-        <div class="col-md-6">
-          <div id="showDelivery">
-            <h2></h2>
-
-            <p>First name: <span class="first-name"></span></p>
-            <p>Last name: <span class="last-name"></span></p>
-            <p>Address: <span class="address"></span></p>
-            <ul id="addresses">
-
-            </ul>
-          </div>
-        </div>
- -->
-
       </div>
     </div>
-  </body>
+
+</body>

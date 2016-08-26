@@ -13,13 +13,11 @@ function Delivery(street, city, state) {
   this.state = state;
 }
 
-
-
 $(document).ready(function() {
-  $("form#new-locale").submit(function(event) {
+  $("form#pizzaInput").submit(function(event) {
     event.preventDefault();
+
+var pizzaSize = $("value#sizeInput")val();
 
   });
 });
-
-console.log('#pizzaInfo');

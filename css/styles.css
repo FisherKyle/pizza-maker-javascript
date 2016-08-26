@@ -1,44 +1,12 @@
-#selectBox {
-  background-color: #a50d0d;
-  float: left;
-  min-width: 600px;
-  border-radius: 10px;
-}
-
-#pizzaSizeInput {
-  margin-top: 1%;
-  margin-left: 10%;
-  margin-bottom: 8%;
-
-}
-
-#toppingInputOne {
-  margin-top: 1%;
-  margin-left: 40%;
-  margin-bottom: 8%;
-
-}
-
-#toppingInputTwo {
-  margin-top: 1%;
-  margin-left: 90%;
-  margin-bottom: 8%;
-}
-
-
-#pizzaInfo {
-  margin: 5%;
-  margin-bottom: 5%;
-}
-
 body {
   background-color:#4b0202;
 }
 
 h1 {
-  color: #f4d9be;
+  color: #efbf8f;
   font-family: "Arial Rounded MT Bold";
   margin: 1%;
+  margin-top: 2%;
 }
 
 h2 {
@@ -46,8 +14,82 @@ h2 {
   font-family: "Arial Rounded MT Bold";
   margin: 2%;
   margin-left: 4%;
+  margin-top: 5%;
+}
+
+h3 {
+  color: #efbf8f;
+  font-family: "Arial Rounded MT Bold";
+  margin: 1%;
+  margin-bottom: 8%;
+}
+
+label {
+  color: #f4d9be;
+  font-family: "Arial Rounded MT Bold";
+  margin: 1%;
+}
+
+p {
+text-align: center;
+color: #f4d9be;
+font-size: 300%;
+font-family: "Arial Rounded MT Bold";
+margin-left: 23%;
 }
 
 .btn {
   margin-bottom: 10%;
+  text-align: center;
+}
+
+#orderAddress {
+  background-color: #a50d0d;
+  border-radius: 8px;
+  float: left;
+}
+
+#orderPizza {
+  background-color: #a50d0d;
+  border-radius: 8px;
+  float: left;
+  margin-top: 1%;
+  min-height: 500px;
+}
+
+#addressInput {
+margin-left: 4%;
+}
+
+#pizzaInput {
+  margin: 5%;
+  margin-bottom: 5%;
+}
+#toppingInputTwo {
+  margin-top: 1%;
+  margin-left: 90%;
+  margin-bottom: 8%;
+}
+#toppingInputOne {
+  margin-top: 1%;
+  margin-left: 48%;
+  margin-bottom: 8%;
+
+}
+#SizeInput {
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-bottom: 8%;
+
+}
+#selectBox {
+  background-color: #a50d0d;
+  float: left;
+  min-width: 600px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+select {
+  float: left;
 }
