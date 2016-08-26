@@ -13,14 +13,14 @@
   <body>
     <div class="container">
       <h1>Pizza Selector</h1>
-      <div class="row">
-        <h2>Create your pizza:</h2>
+      <div class="row" id="selectBox">
+        <h2>create your pizza:</h2>
+        <!-- pizza selectors -->
         <form id="pizzaInfo">
 
-<!-- pizza selectors -->
-        <div class="col-md-2">
+        <div class="col-md-3">
           <form id="pizzaSizeInput">
-            <label for="size">select your pizza size:</label><br>
+            <label for="size">select your size:</label><br>
             <div class = "form-group">
               <select type="submit">
                 <option>10"</option>
@@ -32,10 +32,10 @@
           </form>
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <form id="toppingInputOne">
             <div class="form-group">
-              <label for="toppingOne">add topping:</label><br>
+              <label for="toppingOne">topping #1:</label><br>
                 <select type="submit">
                   <option>Mushrooms</option>
                   <option>Olives</option>
@@ -49,9 +49,9 @@
           </form>
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <form id="toppingInputTwo">
-              <label for="toppingTwo">second topping:</label><br>
+              <label for="toppingTwo">topping #2:</label><br>
               <div class = "form-group">
                 <select type="submit">
                   <option>Mushrooms</option>
@@ -65,16 +65,22 @@
               <span class='btn btn-primary' type="submit">ok</span>
           </form>
         </div>
+        </form>
+      </div>
+    </div>
 <!-- end of pizza selectors -->
+<div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h2>For delivery, click to add an address.</h2>
-    <span class="btn btn-primary" id="addDelivery"></span>
+      <h2>for delivery, click to add an address.</h2>
+    <span class="btn btn-primary" id="addDelivery">add</span>
 
           <div id="deliveryInput">
             <span class = "btn-primary" id="addTopping">
+            </div>
+          </div>
 
-          <div class="form-group">
+          <!-- <div class="form-group">
           <div class="new-address primary-addresses">
             <div class="form-group">
               <label for="new-street">Street</label>
@@ -116,7 +122,7 @@
             </ul>
           </div>
         </div>
-
+ -->
 
       </div>
     </div>
