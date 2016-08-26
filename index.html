@@ -13,37 +13,47 @@
   <body>
     <div class="container">
       <h1>Pizza Selector</h1>
+
       <div class="row">
         <div class="col-md-6">
           <h2>Select Your Toppings:</h2>
+
           <form id="pizzaInput">
             <div class="form-group">
-              <label for="new-topping-first">First Topping:</label>
+              <label for="newSize">Select your pizza size:</label>
               <input type="text" class="form-control" id="new-topping-first" placeholder="ex. John">
             </div>
             <div class="form-group">
-              <label for="new-size">Size:</label>
+              <label for="toppingOne">Select your pizza topping:</label>
               <input type="text" class="form-control" id="new-size" placeholder="ex. Smith">
             </div>
-
-            <div id="deliveryInput">
-              <div class="new-address primary-addresses">
-                <div class="form-group">
-                  <label for="new-street">Street</label>
-                  <input type="text" class="form-control new-street"  placeholder="ex. 950 Ivy Drive">
-                </div>
-                <div class="form-group">
-                  <label for="new-city">City</label>
-                  <input type="text" class="form-control new-city" placeholder="ex. New York">
-                </div>
-                <div class="form-group">
-                  <label for="new-state">State</label>
-                  <input type="text" class="form-control new-state" placeholder="ex. NY">
-                </div>
-              </div>
+            <div class="form-group">
+              <label for="toppingTwo">Select your pizza topping:</label>
+              <input type="text" class="form-control" id="new-size" placeholder="ex. Smith">
             </div>
+                <label for="toppingThree">Select your pizza topping:</label>
+                <input type="text" class="form-control" id="new-size" placeholder="ex. Smith">
+        </div>
+          <div id="deliveryInput">
+            <span class = "btn-primary" id="addTopping">
+              <div class="form-group">
+          <div class="new-address primary-addresses">
+            <div class="form-group">
+              <label for="new-street">Street</label>
+              <input type="text" class="form-control new-street"  placeholder="ex. 950 Ivy Drive">
+            </div>
+            <div class="form-group">
+              <label for="new-city">City</label>
+              <input type="text" class="form-control new-city" placeholder="ex. New York">
+            </div>
+            <div class="form-group">
+              <label for="new-state">State</label>
+              <input type="text" class="form-control new-state" placeholder="ex. NY">
+            </div>
+          </div>
+        </div>
 
-            <span class="btn btn-primary" id="add-address">Another address</span>
+            <span class="btn btn-primary" id="addTopping">Add another topping:</span>
 
             <button type="submit" class="btn">Add</button>
           </form>
