@@ -29,10 +29,16 @@ Contact kyle@kylefisher.com for more information.
 #### **//** **Specifications**
 **___________________________________________________________**
 
-Description: User selects a single medium pizza with a single topping.
+Description: User selects a medium pizza with a single topping.
   * example input: medium with mushrooms
   * example output: $12
-  fill these in first!!!!
+Description: User selects a large pizza and opts for two toppings.
+  * example input: large with pepperoni and veggies
+  * example output: $17
+Description: User clicks on the create pie button without having selected a pizza or topping.
+  * example input: click on "Create" button(without selecting any options)
+  * example output: alert of "Please first select from the above options."
+
 
 
 ### License

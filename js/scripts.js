@@ -23,7 +23,6 @@ $(document).ready(function() {
     var userToppingOne = $("input:radio[name=selTopOne]:checked").val();
     var userToppingTwo = $("input:radio[name=selTopTwo]:checked").val();
     var userPizza = new Pizza(sizePie, userToppingOne, userToppingTwo);
-    var dianePizza = new Pizza("small", "mushrooms", "bacon");
     var kylePizza = new Pizza("large", "pepperoni", "peppers");
 
 // alerts are not smart enough to show objects. It will show you object [object]
@@ -37,7 +36,7 @@ debugger;
   // $("#outputPizza").append("Kyle's Pizza is:" + kylePizza.sizePie + "<br>");
   // $("#outputPizza").append("Kyle's first topping is:" + kylePizza.toppingOne + "<br>");
   // $("#outputPizza").append("Diane's first topping is:" + dianePizza.toppingOne + "<br>");
-  // $("#outputPizza").append("User's pizza size is:" + userPizza.sizePie + "<br>");
+  $("#outputPizza").append("User's pizza size is:" + userPizza.sizePie + "<br>");
   $("#outputPizza").append("User's first topping is:" + userPizza.toppingOne + "<br>");
   $("#outputPizza").append("User's second topping is:" + userPizza.toppingTwo + "<br>");
 
