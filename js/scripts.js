@@ -10,10 +10,32 @@ Pizza.prototype.userOrder = function() {
   return "You ordered a " + this.sizePie + " with " + this.toppingOne + " and " +this.toppingTwo + ".";
 }
 
-Pizza.prototype.pizzaCost = function() {
-  return "$12";
-}
+Pizza.prototype.pizzaCost = function(sizePie, toppingOne, toppingTwo) {
+  var priceTotal = 0;
+  var toppingsLoop = ["pepperoni", "veggies", "olives", "sausage", "mushroom"];
 
+  for (i = 0; i < toppingsLoop.length; i++) {
+    if (toppingOne === toppingsLoop[i]) {
+      priceTotal += 2; }
+    if (toppingTwo === toppingsLoop[i]) {
+      priceTotal += 2; }
+  }
+
+  if (sizePie === "medium") {
+    priceTotal += 12
+  } else if (sizePie === "large") {
+    priceTotal += 14
+  } else if (sizePie === "small") {
+    priceTotal += 10
+  } else {
+    alert("Please, select a pizza size from above.");
+  }
+  return priceTotal;
+
+  if (userPizza.toppingOne === undefined && userPizza.toppingTwo === undefined) {
+    $("outputPizza").append("If no toppings are selected, the price below reflects that of a plain cheese pizza.");
+  }
+};
 
 $(document).ready(function() {
   $("form#pizzaInput").submit(function(event) {
@@ -25,29 +47,10 @@ $(document).ready(function() {
     var userPizza = new Pizza(sizePie, userToppingOne, userToppingTwo);
     var kylePizza = new Pizza("large", "pepperoni", "peppers");
 
-// alerts are not smart enough to show objects. It will show you object [object]
-// this was causing an error because newPizza isn't defined. Don't forget to look at errors in your console if things are not working.
-// alert(newPizza);
-
-debugger;
-
-
-  // $("#outputPizza").append("Diane's Pizza is: " + dianePizza.sizePie + "<br>");
-  // $("#outputPizza").append("Kyle's Pizza is:" + kylePizza.sizePie + "<br>");
-  // $("#outputPizza").append("Kyle's first topping is:" + kylePizza.toppingOne + "<br>");
-  // $("#outputPizza").append("Diane's first topping is:" + dianePizza.toppingOne + "<br>");
-  $("#outputPizza").append("User's pizza size is:" + userPizza.sizePie + "<br>");
-  $("#outputPizza").append("User's first topping is:" + userPizza.toppingOne + "<br>");
-  $("#outputPizza").append("User's second topping is:" + userPizza.toppingTwo + "<br>");
-
+  $("#outputPizza").text("");
   var outputOrder = userPizza.userOrder();
   $("#outputPizza").append(outputOrder);
-  var finalCost = userPizza.pizzaCost();
-  $("#outputPizza").append(finalCost);
-
-  $("#outputPizza").append(userPizza.userOrder());
-
-
-
+  var finalCost = userPizza.pizzaCost(sizePie, userToppingOne, userToppingTwo);
+  $("#outputPizza").append("Your total is $" + finalCost + ".");
   });
 });

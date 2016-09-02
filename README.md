@@ -34,27 +34,13 @@ Description: User selects a medium pizza with a single topping.
   * example output: $12
 Description: User selects a large pizza and opts for two toppings.
   * example input: large with pepperoni and veggies
-  * example output: $17
-Description: User clicks on the create pie button without having selected a pizza or topping.
+  * example output: $18
+Description: User clicks on the create pie button without having selected a size pizza.
   * example input: click on "Create" button(without selecting any options)
-  * example output: alert of "Please first select from the above options."
+  * example output: alert of "Please, select a pizza size from above."
 
 
 
 ### License
 
 Copyright (c) 2016 **Kyle Fisher** **//** www.kylefisher.com
-
-Checklist
-: allow users to select toppings and size of pizzas
-: create a pizza object selector with properties for toppings and size
-: create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
-: ojects drive business logic (in javascript, not jquery)
-: constructors and prototypes used successfully
-: app works
-: plain english specs included
-Further
-: style your site with CSS and images.
-: allow users to order more than one pizza with different toppings.
-: display the list of pizzas ordered as links that can be clicked for details.
-: offer a delivery option that then requires address information.
