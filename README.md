@@ -2,7 +2,10 @@
 
 #### Epicodus | 08.19.16
 ###### _By **Kyle Fisher**_
-
+---
+---
+![sample screenshot](pizza.png)
+---
 ## **//** Description
 
 A front end app which allows users to create different types of pizzas.

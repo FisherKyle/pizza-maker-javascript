@@ -76,6 +76,7 @@ p {
   float: left;
   margin-top: 1%;
   min-height: 500px;
+  background-image: url("pizzawallpaper.jpg")
 }
 
 #addressInput {
